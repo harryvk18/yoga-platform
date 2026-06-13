@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Mulish', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 96px;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #faf5ec; /* sand */
+    color: #3c352b; /* readable warm dark */
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+    color: #2a2723; /* ink */
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background: #e0922f; /* amber */
+    color: #2a2723;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: var(--font-body);
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+}
+
+@layer components {
+  /* Primary CTA — terracotta fill, cream label (AA: 5.63). Hover signals via
+     lift + deeper shadow only, so the label never drops below AA contrast. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-clay px-7 py-4
+           font-semibold text-cream shadow-cta transition-all duration-200
+           hover:-translate-y-0.5 hover:shadow-cta-hover active:translate-y-0 active:scale-[0.98]
+           focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-amber/60;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-clay
+           px-6 py-3.5 font-semibold text-clay transition-colors duration-200 hover:bg-stone
+           focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-clay/25;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-umber/25 bg-cream px-4 py-3.5 text-ink
+           placeholder:text-umber/50 transition-shadow duration-200
+           focus:border-clay focus:outline-none focus:ring-4 focus:ring-amber/35;
+    min-height: 52px;
+  }
+
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-clay;
+  }
+}
+
+@layer utilities {
+  /* Soft warm sunrise behind the hero on the light ground — restrained. */
+  .warm-glow {
+    background: radial-gradient(
+      90% 70% at 78% 8%,
+      rgba(224, 146, 47, 0.20) 0%,
+      rgba(168, 72, 43, 0.08) 38%,
+      rgba(250, 245, 236, 0) 70%
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Used inline by the success-state lotus (LotusDraw); defined here so it
+   always exists regardless of Tailwind's animation-utility purging. */
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
