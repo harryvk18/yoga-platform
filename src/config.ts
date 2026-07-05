@@ -1,6 +1,6 @@
 /**
- * BRAND_NAME is a PLACEHOLDER. Change it here (one line) once a final,
- * trademark-cleared name is chosen — it is never hardcoded elsewhere.
- * "Sānjh" evokes dusk; replace before any public launch.
+ * BRAND_NAME is the product's display name, rendered in the navbar and footer.
+ * It is defined once here and never hardcoded elsewhere — change it in this one
+ * place to rebrand the whole site.
  */
-export const BRAND_NAME = 'Sānjh';
+export const BRAND_NAME = 'YogOm';

@@ -1,6 +1,6 @@
-# Sānjh — Business Model (Pre-Launch · France)
+# YogOm — Business Model (Pre-Launch · France)
 
-> *"Sānjh" is a placeholder product name. No school, university, person, or real brand is referenced anywhere in this document or the product. Internal document, EUR.*
+> *"YogOm" is the working product name. No school, university, person, or real brand is referenced anywhere in this document or the product. Internal document, EUR.*
 
 ## 1. Positioning
 
