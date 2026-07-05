@@ -100,7 +100,7 @@ const fr = {
     intro:
       'Votre première séance en studio est offerte, sans carte. Et nos séances en ligne sont données en direct par des professeurs en Inde — à 7,50 € la séance.',
     plans: [
-      { code: 'Découverte', name: 'Gratuit', price: '0 €', cadence: 'pour essayer', blurb: 'Première séance en studio offerte. Sans carte, sans engagement.', popular: false, note: '' },
+      { code: 'En studio', name: 'En présentiel', price: '79,99 €', cadence: '/mois', blurb: '8 cours en studio par mois, dans un studio partenaire près de chez vous.', popular: true, note: '8 séances · moins de 10 € la séance' },
       { code: 'En ligne', name: 'En direct d’Inde', price: '60 €', cadence: '/mois', blurb: '8 séances en ligne par mois, en direct avec un professeur en Inde — depuis chez vous.', popular: false, note: '8 séances · 7,50 € la séance' },
     ],
     noCard: 'Aucune carte bancaire pour rejoindre la liste ou essayer votre premier cours.',
@@ -219,7 +219,7 @@ const en: Content = {
     intro:
       'Your first studio class is free, no card. And our online sessions are taught live by teachers in India — at €7.50 a session.',
     plans: [
-      { code: 'Discover', name: 'Free', price: '€0', cadence: 'to try', blurb: 'Free first studio class. No card, no commitment.', popular: false, note: '' },
+      { code: 'In studio', name: 'In person', price: '€79.99', cadence: '/month', blurb: '8 in-person studio classes a month, at a partner studio near you.', popular: true, note: '8 classes · under €10 each' },
       { code: 'Online', name: 'Live from India', price: '€60', cadence: '/month', blurb: '8 live online sessions a month with a teacher in India — from home.', popular: false, note: '8 sessions · €7.50 each' },
     ],
     noCard: 'No card needed to join the waitlist or try your first class.',
